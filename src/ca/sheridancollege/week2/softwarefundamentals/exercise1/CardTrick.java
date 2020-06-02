@@ -1,6 +1,6 @@
 /*
-*ID: 991587501
-*NAME: Harmandeep Kaur
+*ID: 991558734
+*  Modifier NAME: Kajal Kajal
 *Exercise 1
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -23,7 +23,7 @@ public class CardTrick {
          Scanner inp=new Scanner(System.in);
         Card[] magicHand = new Card[8];
         
-        for (int i=1; i<magicHand.length; i++)
+        for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
              c.setValue(c.randomValue());
@@ -33,9 +33,18 @@ public class CardTrick {
             magicHand[i]=c;
             System.out.println(magicHand[i].getSuit()+"  "+magicHand[i].getValue());
         }
+      Card[] luckyCard= new Card[8];
+                 for (int i=0; i<luckyCard.length; i++)
+        {
+            Card g = new Card();
+             g.setValue(g.randomValue());
+          g.setSuit(Card.SUITS[g.randomSuit()]);
+            luckyCard[i]=g;
+            System.out.println(luckyCard[i].getSuit()+"  "+luckyCard[i].getValue());
+                 }
          System.out.println("Enter card value:");
         int num=inp.nextInt();
-        System.out.print("\nenter a  suit of a card(Hearts, Diamonds, Spades, Clubs): ");
+        System.out.print("enter a  suit of a card(Hearts, Diamonds, Spades, Clubs): ");
 
         String  suit=inp.nextLine();
         //insert code to ask the user for Card value and suit, create their card
@@ -54,8 +63,7 @@ public class CardTrick {
             } else {
                 System.out.println("your card does not matches in magicHand");
             }
-        
-        
+       
     
     
         }
